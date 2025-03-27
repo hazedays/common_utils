@@ -25,7 +25,7 @@ class ObjectUtil {
   /// Returns true  String or List or Map is empty.
   static bool isEmpty(Object? object) {
     if (object == null) return true;
-    if (object is String && object.trim().replaceAll(' ', '').isEmpty) {
+    if (object is String && object.isEmpty) {
       return true;
     } else if (object is Iterable && object.isEmpty) {
       return true;

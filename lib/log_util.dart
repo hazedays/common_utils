@@ -1,3 +1,12 @@
+/*
+ * @Author: A kingiswinter@gmail.com
+ * @Date: 2025-03-27 17:08:58
+ * @LastEditors: A kingiswinter@gmail.com
+ * @LastEditTime: 2025-03-27 21:29:20
+ * @FilePath: /common_utils/lib/src/log_util.dart
+ * 
+ * Copyright (c) 2025 by A kingiswinter@gmail.com, All Rights Reserved.
+ */
 // ignore_for_file: avoid_print
 
 import 'dart:developer';

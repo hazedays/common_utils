@@ -151,30 +151,30 @@ class DateUtil {
   /// languageCode zh or en
   /// short
   static String getWeekday(DateTime? dateTime,
-      {String languageCode = 'en', bool short = false}) {
+      {String languageCode = 'zh', bool short = false}) {
     if (dateTime == null) return "";
     String weekday = "";
     switch (dateTime.weekday) {
       case 1:
-        weekday = languageCode == 'zh' ? '星期一' : 'Monday';
+        weekday = languageCode == 'zh' ? '周一' : 'Monday';
         break;
       case 2:
-        weekday = languageCode == 'zh' ? '星期二' : 'Tuesday';
+        weekday = languageCode == 'zh' ? '周二' : 'Tuesday';
         break;
       case 3:
-        weekday = languageCode == 'zh' ? '星期三' : 'Wednesday';
+        weekday = languageCode == 'zh' ? '周三' : 'Wednesday';
         break;
       case 4:
-        weekday = languageCode == 'zh' ? '星期四' : 'Thursday';
+        weekday = languageCode == 'zh' ? '周四' : 'Thursday';
         break;
       case 5:
-        weekday = languageCode == 'zh' ? '星期五' : 'Friday';
+        weekday = languageCode == 'zh' ? '周五' : 'Friday';
         break;
       case 6:
-        weekday = languageCode == 'zh' ? '星期六' : 'Saturday';
+        weekday = languageCode == 'zh' ? '周六' : 'Saturday';
         break;
       case 7:
-        weekday = languageCode == 'zh' ? '星期日' : 'Sunday';
+        weekday = languageCode == 'zh' ? '周日' : 'Sunday';
         break;
       default:
         break;

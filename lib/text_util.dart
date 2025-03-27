@@ -1,9 +1,14 @@
-/**
- * @Author: Sky24n
- * @GitHub: https://github.com/Sky24n
- * @Description: Text Util.
- * @Date: 2019/7/9
+/*
+ * @Author: A kingiswinter@gmail.com
+ * @Date: 2024-12-03 21:04:16
+ * @LastEditors: A kingiswinter@gmail.com
+ * @LastEditTime: 2025-03-27 21:30:53
+ * @FilePath: /common_utils/lib/src/text_util.dart
+ * 
+ * Copyright (c) 2025 by A kingiswinter@gmail.com, All Rights Reserved.
  */
+
+import 'dart:math';
 
 /// Text Util.
 class TextUtil {
@@ -79,5 +84,22 @@ class TextUtil {
       sb.writeCharCode(text.codeUnitAt(i));
     }
     return sb.toString();
+  }
+
+  /// durationFormat
+  static String durationFormat(Duration duration) {
+    if (duration.inSeconds == 0) return '00:00:00';
+    String twoDigits(int n) => n.toString().padLeft(2, '0');
+    String twoDigitMinutes = twoDigits(duration.inMinutes.remainder(60));
+    String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
+    return '${twoDigits(duration.inHours)}:$twoDigitMinutes:$twoDigitSeconds';
+  }
+
+  /// 格式化字节大小
+  static String formatBytes(int bytes, {int decimals = 2}) {
+    if (bytes <= 0) return '0 B';
+    const suffixes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    var i = (log(bytes) / log(1024)).floor();
+    return '${(bytes / pow(1024, i)).toStringAsFixed(decimals)} ${suffixes[i]}';
   }
 }
